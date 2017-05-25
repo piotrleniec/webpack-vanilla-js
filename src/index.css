@@ -1,4 +1,16 @@
-.hello {
-  color: pink;
-  background-color: gray;
+body {
+  background-color: black;
+
+  .hello {
+    color: pink;
+    background-color: gray;
+  }
+}
+
+.list {
+  background-color: saddlebrown;
+
+  &__element {
+    color: yellow;
+  }
 }
