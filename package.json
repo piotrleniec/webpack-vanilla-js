@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "webpack-dev-server --content-base public"
+  },
+  "dependencies": {
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
