@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "webpack-dev-server --content-base public"
+    "start": "webpack-dev-server --config webpack.config.dev.js --content-base public"
   },
   "dependencies": {
     "babel-core": "^6.24.1",
