@@ -1,3 +1,5 @@
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = [
   {
     test: /\.js$/,
@@ -11,18 +13,20 @@ module.exports = [
   },
   {
     test: /\.css$/,
-    use: [
-      'style-loader',
-      'css-loader',
-      {
-        loader: 'postcss-loader',
-        options: {
-          plugins: () => [
-            require('autoprefixer'),
-            require('postcss-nested')
-          ]
+    use: ExtractTextPlugin.extract({
+      fallback: 'style-loader',
+      use: [
+        'css-loader',
+        {
+          loader: 'postcss-loader',
+          options: {
+            plugins: () => [
+              require('autoprefixer'),
+              require('postcss-nested')
+            ]
+          }
         }
-      }
-    ]
+      ]
+    })
   }
 ];
